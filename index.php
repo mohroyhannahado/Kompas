@@ -44,7 +44,7 @@ if(isset($_GET['i']) AND !empty($_GET['i']))
 	}
 	exit;
 }else{
-	header('https://www.pastiin.com/#BangRoyHan');
+	echo 'GET i';
 }
 
 ?>
