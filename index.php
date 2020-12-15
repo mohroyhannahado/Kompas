@@ -37,8 +37,9 @@ if(isset($_GET['i']) AND !empty($_GET['i']))
 	$dg = getImaged(base64_decode(trim($_GET['i'])));
 	$bur = base64_encode($dg);
 	$has = md5($bur);
-	if(diqirim($bur)=='y'){
-		echo 'sukses';
+	$dicek = diqirim($bur);
+	if(isset($dicek) AND !empty($dicek) AND strpos($dicek, 'i0.wp.com/ikan.nasihosting.com') !== false){
+		header('location: '.$dicek);
 	}else{
 		echo 'gagal';
 	}
