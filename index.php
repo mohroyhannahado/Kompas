@@ -35,7 +35,7 @@ function diqirim($d){
 if(isset($_GET['i']) AND !empty($_GET['i']))
 {
 	$dg = getImaged(base64_decode(trim($_GET['i'])));
-	$bur = base64_encode($dg);
+	$bur = base64_encode(base64_encode($dg));
 	$has = md5($bur);
 	$dicek = diqirim($bur);
 	if(isset($dicek) AND !empty($dicek) AND strpos($dicek, 'i0.wp.com/ikan.nasihosting.com') !== false){
