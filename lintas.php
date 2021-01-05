@@ -10,7 +10,7 @@ function ScrapeBRH($url)
 	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
 	curl_setopt($ch, CURLOPT_REFERER, $url);
-	curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36');
+	curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.'.rand(1000,9999).'.102 Safari/537.'.rand(10,99));
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'accept: */*',
     'accept-language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7,ru;q=0.6,da;q=0.5,mt;q=0.4,pt;q=0.3,de;q=0.2',
