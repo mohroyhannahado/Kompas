@@ -91,6 +91,7 @@ if(isset($_GET['id']))
 		
 		//echo "$gbre<br><br><br>$ked<br>$spek";
 		echo PostMobileBRH('isi', json_encode(array($_GET['id'], $gbre, $spek, $ked)));
+		echo "<script>close();</script>";
 	}
 	exit;
 }else{
